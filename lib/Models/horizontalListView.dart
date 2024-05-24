@@ -21,7 +21,6 @@ class horizontalListview extends StatelessWidget {
       height: 130,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-
         itemCount: CategoryList.length,
         itemBuilder: (context, num) {
           return CategoryList[num];

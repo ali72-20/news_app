@@ -1,9 +1,7 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/Category_card.dart';
 import 'package:news_app/Models/horizontalListView.dart';
+
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
