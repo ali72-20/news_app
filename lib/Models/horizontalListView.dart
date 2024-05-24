@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
-
-import 'Category_card.dart';
+import 'package:news_app/DataCalsses/CategoryCardData.dart';
+import 'package:news_app/Models/Category_card.dart';
 
 class horizontalListview extends StatelessWidget {
   horizontalListview({super.key});
 
-  List<CategoryCard> CategoryList = [
-    CategoryCard(Category: 'General', ImagePath: 'assets/general.avif'),
-    CategoryCard(Category: 'Sports', ImagePath: 'assets/sports.avif'),
-    CategoryCard(Category: 'Business', ImagePath: 'assets/business.avif'),
-    CategoryCard(
-        Category: 'Entertainment', ImagePath: 'assets/entertaiment.avif'),
-    CategoryCard(Category: 'Health', ImagePath: 'assets/health.avif'),
-    CategoryCard(Category: 'Science', ImagePath: 'assets/science.avif'),
+  List<CategorycardData> CategoryList = [
+    CategorycardData(CategoryName: 'General', ImagePath: 'assets/general.avif'),
+    CategorycardData(CategoryName: 'Sports', ImagePath: 'assets/sports.avif'),
+    CategorycardData(CategoryName: 'Business', ImagePath: 'assets/business.avif'),
+    CategorycardData(
+        CategoryName: 'Entertainment', ImagePath: 'assets/entertaiment.avif'),
+    CategorycardData(CategoryName: 'Health', ImagePath: 'assets/health.avif'),
+    CategorycardData(CategoryName: 'Science', ImagePath: 'assets/science.avif'),
   ];
 
   @override
@@ -22,8 +22,8 @@ class horizontalListview extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: CategoryList.length,
-        itemBuilder: (context, num) {
-          return CategoryList[num];
+        itemBuilder: (context, index) {
+          return CategoryCard(categorycardData: CategoryList[index]);
         },
       ),
     );

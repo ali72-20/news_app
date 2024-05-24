@@ -2,12 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/DataCalsses/CategoryCardData.dart';
 
 class CategoryCard extends StatelessWidget {
-  CategoryCard({required this.Category, required this.ImagePath});
+  CategoryCard({required this.categorycardData});
 
-  String Category;
-  String ImagePath;
+  CategorycardData categorycardData;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,13 +18,13 @@ class CategoryCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         image: DecorationImage(
-          image: AssetImage(ImagePath),
+          image: AssetImage(categorycardData.ImagePath),
           fit: BoxFit.fill,
         ),
       ),
       child: Center(
         child: Text(
-          Category,
+          categorycardData.CategoryName,
           style: const TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
         ),
