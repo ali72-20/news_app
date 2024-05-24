@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/Models/Category_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -33,6 +34,7 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
+      body: CategoryCard(Category: 'Sports', ImagePath: 'assets/sports.avif'),
     );
   }
 }
