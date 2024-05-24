@@ -3,9 +3,10 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/Category_card.dart';
+import 'package:news_app/Models/horizontalListView.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,11 @@ class HomeView extends StatelessWidget {
           ],
         ),
       ),
-      body: CategoryCard(Category: 'Sports', ImagePath: 'assets/sports.avif'),
+      body: Column(
+        children: [
+          horizontalListview(),
+        ],
+      ),
     );
   }
 }
