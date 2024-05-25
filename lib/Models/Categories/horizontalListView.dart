@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:news_app/DataCalsses/CategoryCardData.dart';
-import 'package:news_app/Models/Category_card.dart';
+import 'package:news_app/Models/Categories/Category_card.dart';
 
 class horizontalListview extends StatelessWidget {
   horizontalListview({super.key});

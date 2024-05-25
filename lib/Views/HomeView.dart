@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/horizontalListView.dart';
-import 'package:news_app/Models/newsTile.dart';
+import 'package:news_app/Models/Categories/horizontalListView.dart';
+import 'package:news_app/Models/newsDetails/newsTile.dart';
 
 
 class HomeView extends StatelessWidget {
