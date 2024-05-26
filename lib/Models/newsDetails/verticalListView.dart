@@ -7,63 +7,65 @@ class verticalListView extends StatelessWidget {
 
   List<newsDetails> news = [
     newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
-        title: 'new news for today',
-        desceprtion: 'this is the desceprtion'),
-
-    newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
-        title: 'new news for today',
-        desceprtion: 'this is the desceprtion'),
-
-    newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
-        title: 'new news for today',
-        desceprtion: 'this is the desceprtion'),
-
-    newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
-        title: 'new news for today',
-        desceprtion: 'this is the desceprtion'),
-
-    newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
         desceprtion: 'this is the desceprtion'),
     newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
         desceprtion: 'this is the desceprtion'),
     newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
         desceprtion: 'this is the desceprtion'),
     newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
         desceprtion: 'this is the desceprtion'),
     newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
         desceprtion: 'this is the desceprtion'),
     newsDetails(
-        image: 'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
         desceprtion: 'this is the desceprtion'),
-
-
+    newsDetails(
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        title: 'new news for today',
+        desceprtion: 'this is the desceprtion'),
+    newsDetails(
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        title: 'new news for today',
+        desceprtion: 'this is the desceprtion'),
+    newsDetails(
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        title: 'new news for today',
+        desceprtion: 'this is the desceprtion'),
+    newsDetails(
+        image:
+            'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+        title: 'new news for today',
+        desceprtion: 'this is the desceprtion'),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: ListView.builder(
-        scrollDirection: Axis.vertical,
-        itemBuilder: (context, index){
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        childCount: news.length,
+        (context, index) {
           return newsTile(news_details: news[index]);
         },
-        itemCount: news.length,
       ),
     );
   }

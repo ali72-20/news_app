@@ -14,9 +14,7 @@ class newsTile extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 8, left: 8),
-            child: ClipRRect(
+           ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: Image.network(
                 news_details.image,
@@ -25,7 +23,6 @@ class newsTile extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-          ),
           const SizedBox(
             height: 12,
           ),
