@@ -27,7 +27,8 @@ class newsTile extends StatelessWidget {
             height: 12,
           ),
           const Text(
-            'Title should place here',
+            'Title should place here not to do that it is not good for you to be here right now',
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(
               color: Colors.black87,
               fontSize: 20,
