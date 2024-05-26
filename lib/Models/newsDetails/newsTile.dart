@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/DataCalsses/newsDetails.dart';
 
 class newsTile extends StatelessWidget {
-  const newsTile({super.key});
+  newsTile({required this.news_details});
+
+  newsDetails news_details;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,7 @@ class newsTile extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: Image.network(
-                'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+                news_details.image,
                 height: 200,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -26,10 +29,10 @@ class newsTile extends StatelessWidget {
           const SizedBox(
             height: 12,
           ),
-          const Text(
-            'Title should place here not to do that it is not good for you to be here right now',
+          Text(
+            news_details.title,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black87,
               fontSize: 20,
               fontWeight: FontWeight.w500,
@@ -38,10 +41,10 @@ class newsTile extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-         const Text(
-            'And description',
+          Text(
+            news_details.desceprtion,
             maxLines: 2,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.grey,
               fontSize: 14,
             ),

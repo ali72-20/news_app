@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:news_app/Models/Categories/horizontalListView.dart';
-import 'package:news_app/Models/newsDetails/newsTile.dart';
-
+import 'package:news_app/Models/newsDetails/verticalListView.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({super.key});
@@ -37,7 +35,9 @@ class HomeView extends StatelessWidget {
       body: Column(
         children: [
           horizontalListview(),
-          newsTile(),
+          Expanded(
+            child: verticalListView(),
+          ),
         ],
       ),
     );

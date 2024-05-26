@@ -20,6 +20,7 @@ class horizontalListview extends StatelessWidget {
     return SizedBox(
       height: 130,
       child: ListView.builder(
+        padding: const EdgeInsets.only(bottom: 16, top: 8),
         scrollDirection: Axis.horizontal,
         itemCount: CategoryList.length,
         itemBuilder: (context, index) {
