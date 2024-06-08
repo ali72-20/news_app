@@ -3,8 +3,9 @@ import 'package:news_app/DataCalsses/newsDetails.dart';
 import 'package:news_app/Models/newsDetails/newsTile.dart';
 
 class verticalListView extends StatelessWidget {
-  verticalListView({super.key});
 
+  verticalListView({super.key});
+  
   List<newsDetails> news = [
     newsDetails(
         image:
@@ -35,12 +36,12 @@ class verticalListView extends StatelessWidget {
         image:
             'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
-        desceprtion: 'this is the desceprtion'),
+        desceprtion: 'this is the description'),
     newsDetails(
         image:
             'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
         title: 'new news for today',
-        desceprtion: 'this is the desceprtion'),
+        desceprtion: 'this is the description'),
     newsDetails(
         image:
             'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
