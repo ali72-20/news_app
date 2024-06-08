@@ -1,37 +1,18 @@
 import 'package:dio/dio.dart';
+import 'package:news_app/DataCalsses/newsDetails.dart';
 
-class newsServieces{
+class NewsServieces{
   final Dio dio;
-  newsServieces(this.dio);
-  void getGeneralNews() async{
-    final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=general');
-    print(response);
-  }
+  String category;
+  NewsServieces(this.dio, this.category);
 
-  void getSportsNews() async{
-  final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=sports');
-  print(response);
+  void getNews() async{
+    final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=$category');
+    Map<String,dynamic> jasonData = response.data;
+    List<dynamic> articles = jasonData["articles"];
+    List<newsDetails> article = [];
+    for(var art in articles){
+      article.add(new newsDetails(image: art["urlToImage"], title: art["title"], desceprtion: art["description"]));
+    }
   }
-  void getBusinessNews() async{
-    final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=business');
-    print(response);
-  }
-  void getEntertainmentNews() async{
-    final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=entertainment');
-    print(response);
-  }
-  void getHealthNews() async{
-    final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=health');
-    print(response);
-  }
-  void getScienceNews() async{
-    final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=science');
-    print(response);
-  }
-
-  void getTechNews() async{
-    final response = await dio.get('https://newsapi.org/v2/top-headlines?apiKey=98583a75142f49e5ac3d537b61989171&country=eg&category=technology');
-    print(response);
-  }
-
 }
