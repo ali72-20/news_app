@@ -13,6 +13,7 @@ class horizontalListview extends StatelessWidget {
         CategoryName: 'Entertainment', ImagePath: 'assets/entertaiment.avif'),
     CategorycardData(CategoryName: 'Health', ImagePath: 'assets/health.avif'),
     CategorycardData(CategoryName: 'Science', ImagePath: 'assets/science.avif'),
+    CategorycardData(CategoryName: 'Technology', ImagePath: 'assets/technology.jpeg'),
   ];
 
   @override
