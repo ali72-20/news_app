@@ -35,6 +35,10 @@ class _getNewsListState extends State<GetNewsList> {
         ? const SliverToBoxAdapter(
             child: Center(child: CircularProgressIndicator()),
           )
-        : verticalListView(news: news);
+        : news.isNotEmpty
+            ? verticalListView(news: news)
+            : const SliverToBoxAdapter(
+                child: Center(child: Text("Opps something wrond, try later!!")),
+              );
   }
 }
