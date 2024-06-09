@@ -1,48 +1,22 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/Services/Apis.dart';
+import 'package:news_app/DataCalsses/newsDetails.dart';
 
-import '../../DataCalsses/newsDetails.dart';
 import 'newsTile.dart';
 
-class virticalListView extends StatefulWidget {
-  const virticalListView({super.key});
+class verticalListView extends StatelessWidget {
 
-  @override
-  State<virticalListView> createState() => _virticalListViewState();
-}
-
-class _virticalListViewState extends State<virticalListView> {
-  @override
-  List<newsDetails> news = [];
-
-  void initState() {
-    super.initState();
-    getNews();
-  }
-
-  bool isLoading = true;
-
-  Future<void> getNews() async {
-    news = await NewsServieces(Dio(), category: 'general').getNews();
-    isLoading = false;
-    setState(() {});
-  }
-
+  verticalListView({super.key, required this.news});
+  List<newsDetails> news;
   @override
   Widget build(BuildContext context) {
-    return isLoading
-        ? const SliverToBoxAdapter(
-            child: Center(child: CircularProgressIndicator()),
-          )
-        : SliverList(
-            delegate: SliverChildBuilderDelegate(
-              childCount: news.length,
-              (context, index) {
-                return newsTile(news_details: news[index]);
-              },
-            ),
-          );
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        childCount: news.length,
+            (context, index) {
+          return newsTile(news_details: news[index]);
+        },
+      ),
+    );
   }
 }

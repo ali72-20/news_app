@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:news_app/Models/Categories/horizontalListView.dart';
 import 'package:news_app/Models/newsDetails/verticalListView.dart';
 
+import '../Models/newsDetails/GetNewsReqest.dart';
+
 class HomeView extends StatelessWidget {
   HomeView({super.key});
 
@@ -40,7 +42,7 @@ class HomeView extends StatelessWidget {
             SliverToBoxAdapter(
               child: horizontalListview(),
             ),
-            virticalListView(),
+            GetNewsList(),
           ],
         ),
       ),
