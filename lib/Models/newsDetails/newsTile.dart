@@ -16,7 +16,7 @@ class newsTile extends StatelessWidget {
            ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: Image.network(
-                news_details.image,
+                news_details.image?? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpS1rwqUMTuIRx4Bqomz0BIOEnNs-R1IJTrcdWdJEPh4e6AOP-atzxe5zHzeTSeDFrrRA&usqp=CAU',
                 height: 200,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -26,7 +26,7 @@ class newsTile extends StatelessWidget {
             height: 12,
           ),
           Text(
-            news_details.title,
+            news_details.title!,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(
               color: Colors.black87,
@@ -38,7 +38,7 @@ class newsTile extends StatelessWidget {
             height: 8,
           ),
           Text(
-            news_details.desceprtion,
+            news_details.desceprtion?? ' ',
             maxLines: 2,
             style: const TextStyle(
               color: Colors.grey,
