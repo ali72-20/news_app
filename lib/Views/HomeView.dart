@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/Models/Categories/horizontalListView.dart';
-import 'package:news_app/Models/newsDetails/verticalListView.dart';
+import 'package:news_app/LIstVIews/horizontalListView.dart';
+import 'package:news_app/LIstVIews/verticalListView.dart';
 
 import '../Models/newsDetails/GetNewsReqest.dart';
 
