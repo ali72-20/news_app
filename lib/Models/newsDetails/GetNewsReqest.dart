@@ -8,8 +8,8 @@ import '../../Services&APIs/NewsServieces.dart';
 import '../Message.dart';
 
 class GetNewsList extends StatefulWidget {
-  const GetNewsList({super.key});
-
+  GetNewsList({super.key ,required this.name});
+  String name;
   @override
   State<GetNewsList> createState() => _GetNewsListState();
 }
@@ -18,9 +18,8 @@ class _GetNewsListState extends State<GetNewsList> {
   var future;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    future = NewsServieces(Dio(), category: 'general').getNews();
+    future = NewsServieces(Dio()).getNews(categoryName: widget.name);
   }
 
   @override
